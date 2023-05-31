@@ -5,8 +5,9 @@ require("dotenv").config()
 require("colors");
 
 
-// const authRouter = require('./routes/api/authRouter.js'); //*
-// const contactsRouter = require('./routes/api/contactsRouter.js'); //*
+// const authRouter = require('./routes/api/marketsRouter.js'); 
+// const contactsRouter = require('./routes/api/contactsRouter.js');
+
 
 
 //----------------------------------------------------------------
@@ -29,8 +30,9 @@ app.use(express.static("public")); //! Чтобы Express мог раздава�
 app.use("/public", express.static("public")); //! мой
 //!+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// app.use('/api/users', authRouter); //*
-// app.use('/api/markets', marketsRouter); //*
+
+// app.use('/api/markets', marketsRouter); 
+// app.use('/api/contacts', contactsRouter);
 
 
 
