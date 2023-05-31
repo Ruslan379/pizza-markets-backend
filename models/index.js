@@ -1,10 +1,8 @@
-const { Contact } = require("./contactModel.js");
-const { User } = require("./userModel.js");
-const { Transaction } = require("./transactionModel");
+const { Market } = require("./marketsModel.js");
+// const { Contact } = require("./contactModel.js");
 
 module.exports = {
-    Contact,
-    User,
-    Transaction,
+    Market,
+    // Contact,
 };
 

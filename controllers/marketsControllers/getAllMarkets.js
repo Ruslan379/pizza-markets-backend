@@ -1,4 +1,4 @@
-// const { Transaction } = require("../../models");
+const { Market } = require("../../models");
 // const { User } = require("../../models");
 
 // const { Unauthorized } = require("http-errors");
@@ -9,8 +9,21 @@
 //-----------------------------------------------------------------------------
 const getAllMarkets = async (req, res) => {
 
-    console.log("getAllMarkets".bgYellow.black);
+    // console.log("getAllMarkets".bgYellow.black);
 
+    //! Получаем сортированный массив всех транзакций по сумме по убыванию
+    const markets = await Market.find({})
+    // .sort("sum") //! сортировка по полю "sum" по возрастанию
+    // .sort({ sum: -1 }) //! сортировка по полю "date" по убыванию
+    // .sort({ date: -1 }) //! сортировка по полю "date" по убыванию
+    // .select({ owner: 0, updatedAt: 0, })   //! не показывать эти поля  
+
+    // ! =========================== console ============================
+    console.log("getAllMarkets:".bgYellow.black); //!
+    console.log("СОРТИРОВАННЫЙ СПИСОК ВСЕХ МАРКЕТОВ:".bgGreen.black)
+    console.log(markets); //!!!!!
+
+    //! ==============================================================
 
 
 
@@ -56,12 +69,13 @@ const getAllMarkets = async (req, res) => {
 
 
 
-    // res.status(200).json({ transactions })
-    res.status(200).json({
-        message: "getAllMarkets",
-        status: "success",
-        code: 200,
-    });
+    res.status(200).json({ markets })
+
+    // res.status(200).json({
+    //     message: "getAllMarkets",
+    //     status: "success",
+    //     code: 200,
+    // });
 };
 
 
