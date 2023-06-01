@@ -1,8 +1,8 @@
 const { Market } = require("./marketsModel.js");
-// const { Contact } = require("./contactModel.js");
+const { Order } = require("./orderModel.js");
 
 module.exports = {
     Market,
-    // Contact,
+    Order,
 };
 

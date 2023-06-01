@@ -5,7 +5,7 @@
 
 
 // //-----------------------------------------------------------------------------
-// const getAllContacts = async (req, res, next) => {
+// const getAllOrders = async (req, res, next) => {
 //     // const contacts = await Contact.find({});
 
 //     console.log("getAllContacts --> req.idUser:".bgYellow.black, req.idUser); // это для ТЕСТА (в коде не нужно)
@@ -121,4 +121,4 @@
 //     });
 // };
 
-// module.exports = getAllContacts;
+// module.exports = getAllOrders;

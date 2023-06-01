@@ -1,15 +1,20 @@
 const express = require('express')
 const router = express.Router()
 
-// const { validation, controllerWrapper, isValidId, authMiddleware } = require("../../middlewares")
-
-// const { contactsControllers: ctrl } = require("../../controllers")
-
 const {
-    // contactJoiSchemaPut,
-    // contactJoiSchemaPatch,
-    // contactJoiSchemaPatchFavorite
-} = require("../../models/contactModel.js");
+    // validation,
+    controllerWrapper,
+    // isValidId,
+    // authMiddleware
+} = require("../../middlewares")
+
+const { ordersControllers: ctrl } = require("../../controllers")
+
+// const {
+//     // contactJoiSchemaPut,
+//     // contactJoiSchemaPatch,
+//     // contactJoiSchemaPatchFavorite
+// } = require("../../models/contactModel.js");
 
 // const validateMiddlewarePut = validation(contactJoiSchemaPut);
 // const validateMiddlewarePatch = validation(contactJoiSchemaPatch);
@@ -29,7 +34,10 @@ const {
 
 
 //! 3. Создание НОВОГО ПОЛЬЗОВАТЕЛЯ
-// router.post("/", authMiddleware, validateMiddlewarePut, controllerWrapper(ctrl.addContact));
+router.post("/",
+    // authMiddleware,
+    // validateMiddlewarePut,
+    controllerWrapper(ctrl.addOrder));
 
 
 //! 4-1. PUT-Обновление ОДНОГО КОНТАКТА по id
