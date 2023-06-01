@@ -25,6 +25,10 @@ const orderSchema = Schema({
         type: String,
         required: [true, 'Phone is required'],
     },
+    order: {
+        type: Array,
+        required: [true, 'Array is required'],
+    },
     total: {
         type: Number,
         default: 0,
