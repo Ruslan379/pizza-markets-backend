@@ -14,12 +14,12 @@ const orderSchema = Schema({
     email: {
         type: String,
         required: [true, 'Email is required'],
-        unique: true,
+        // unique: true,
     },
     phone: {
         type: String,
         required: [true, 'Phone is required'],
-        unique: true,
+        // unique: true,
     },
     address: {
         type: String,
