@@ -1,9 +1,9 @@
-const getAllOrders = require("./getAllOrders")
+// const getAllOrders = require("./getAllOrders")
 const addOrder = require("./addOrder")
 
 
 
 module.exports = {
-    getAllOrders,
+    // getAllOrders,
     addOrder,
 }
